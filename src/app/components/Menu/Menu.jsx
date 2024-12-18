@@ -79,7 +79,7 @@ const Menu = () => {
       gsap.to(menu, {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
         ease: "hop",
-        duration: 1,
+        duration: 0.6,
         onStart: () => {
           menu.style.pointerEvents = "all";
         },

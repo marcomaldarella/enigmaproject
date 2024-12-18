@@ -1,6 +1,6 @@
 import { Light, Dark, Custom } from './core/ColorPresets'
 
-export default {
+const settings = {
   /**
     Simulation configurations
   */
@@ -38,4 +38,6 @@ export default {
   BranchThickness: 1,
   TipThickness: 2,
   BoundsBorderThickness: 1,
-}
+};
+
+export default settings;

@@ -15,8 +15,8 @@ const Page = () => {
   const containerRef = useRef(null);
   const titleRef = useRef(null);
   const dateRef = useRef(null);
-  const firstImgRef = useRef(null);
-  const imgRefs = useRef([]);
+  const firstImageRef = useRef(null);
+  const ImageRefs = useRef([]);
   const copyH3Refs = useRef([]);
   const nextProjectRef = useRef(null);
   const nextProjectTitleRef = useRef(null);
@@ -39,7 +39,7 @@ const Page = () => {
       );
 
       tl.fromTo(
-        firstImgRef.current,
+        firstImageRef.current,
         { clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)" },
         {
           clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
@@ -49,16 +49,16 @@ const Page = () => {
         "-=1"
       );
 
-      imgRefs.current.forEach((img) => {
+      ImageRefs.current.forEach((Image) => {
         gsap.fromTo(
-          img,
+          Image,
           { clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)" },
           {
             clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
             duration: 1.5,
             ease: "power4.out",
             scrollTrigger: {
-              trigger: img,
+              trigger: Image,
               start: "top 50%",
             },
           }
@@ -106,8 +106,8 @@ const Page = () => {
           </div>
 
           <div className="project-content">
-            <div className="img img-1" ref={firstImgRef}>
-              <img src="/portfolio/project-1.jpg" alt="" />
+            <div className="Image Image-1" ref={firstImageRef}>
+              <Image src="/portfolio/project-1.jpg" alt="" />
             </div>
 
             <div className="copy">
@@ -127,12 +127,12 @@ const Page = () => {
               </h3>
             </div>
 
-            <div className="img img-2" ref={(el) => (imgRefs.current[0] = el)}>
-              <img src="/portfolio/project-2.jpg" alt="" />
+            <div className="Image Image-2" ref={(el) => (ImageRefs.current[0] = el)}>
+              <Image src="/portfolio/project-2.jpg" alt="" />
             </div>
 
-            <div className="img img-3" ref={(el) => (imgRefs.current[1] = el)}>
-              <img src="/portfolio/project-3.jpg" alt="" />
+            <div className="Image Image-3" ref={(el) => (ImageRefs.current[1] = el)}>
+              <Image src="/portfolio/project-3.jpg" alt="" />
             </div>
 
             <div className="copy">
@@ -151,11 +151,11 @@ const Page = () => {
               </h3>
             </div>
 
-            <div className="img img-4" ref={(el) => (imgRefs.current[2] = el)}>
-              <img src="/portfolio/project-4.jpg" alt="" />
+            <div className="Image Image-4" ref={(el) => (ImageRefs.current[2] = el)}>
+              <Image src="/portfolio/project-4.jpg" alt="" />
             </div>
-            <div className="img img-5" ref={(el) => (imgRefs.current[3] = el)}>
-              <img src="/portfolio/project-5.jpg" alt="" />
+            <div className="Image Image-5" ref={(el) => (ImageRefs.current[3] = el)}>
+              <Image src="/portfolio/project-5.jpg" alt="" />
             </div>
 
             <div className="copy">
@@ -173,8 +173,8 @@ const Page = () => {
               </h3>
             </div>
 
-            <div className="img img-6" ref={(el) => (imgRefs.current[4] = el)}>
-              <img src="/portfolio/project-6.jpg" alt="" />
+            <div className="Image Image-6" ref={(el) => (ImageRefs.current[4] = el)}>
+              <Image src="/portfolio/project-6.jpg" alt="" />
             </div>
 
             <div className="next-project" ref={nextProjectRef}>

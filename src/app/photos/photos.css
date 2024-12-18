@@ -11,7 +11,7 @@
   height: 100%;
 }
 
-.slider .img {
+.slider .Image {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -28,7 +28,7 @@
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
-.slider-counter > div {
+.slider-counter>div {
   flex: 1;
 }
 

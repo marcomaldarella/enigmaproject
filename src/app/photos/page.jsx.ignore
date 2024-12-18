@@ -24,13 +24,13 @@ const Photos = () => {
         "M0,0 C0.071,0.505 0.192,0.726 0.318,0.852 0.45,0.984 0.504,1 1,1"
       );
 
-      let currentImg = 1;
+      let currentImage = 1;
       const totalSlides = 4;
       let indicatorRotation = 0;
 
       function updateCounterAndTitlePosition() {
-        const counterY = -20 * (currentImg - 1);
-        const titleY = -60 * (currentImg - 1);
+        const counterY = -20 * (currentImage - 1);
+        const titleY = -60 * (currentImage - 1);
 
         gsap.to(counterRef.current, {
           y: counterY,
@@ -47,31 +47,31 @@ const Photos = () => {
 
       function updateActiveSlidePreview() {
         previewsRef.current.forEach((prev) => prev.classList.remove("active"));
-        previewsRef.current[currentImg - 1].classList.add("active");
+        previewsRef.current[currentImage - 1].classList.add("active");
       }
 
       function animateSlide(direction) {
         const currentSlide = sliderImagesRef.current.lastElementChild;
 
-        const slideImg = document.createElement("div");
-        slideImg.classList.add("img");
+        const slideImage = document.createElement("div");
+        slideImage.classList.add("Image");
 
-        const slideImgElem = document.createElement("img");
-        slideImgElem.src = `/assets/img${currentImg}.jpg`;
-        gsap.set(slideImgElem, { x: direction === "left" ? -500 : 500 });
+        const slideImageElem = document.createElement("Image");
+        slideImageElem.src = `/assets/Image${currentImage}.jpg`;
+        gsap.set(slideImageElem, { x: direction === "left" ? -500 : 500 });
 
-        slideImg.appendChild(slideImgElem);
-        sliderImagesRef.current.appendChild(slideImg);
+        slideImage.appendChild(slideImageElem);
+        sliderImagesRef.current.appendChild(slideImage);
 
         const tl = gsap.timeline();
 
-        tl.to(currentSlide.querySelector("img"), {
+        tl.to(currentSlide.querySelector("Image"), {
           x: direction === "left" ? 500 : -500,
           duration: 1.5,
           ease: "hop2",
         })
           .fromTo(
-            slideImg,
+            slideImage,
             {
               clipPath:
                 direction === "left"
@@ -86,7 +86,7 @@ const Photos = () => {
             0
           )
           .to(
-            slideImgElem,
+            slideImageElem,
             {
               x: 0,
               duration: 1.5,
@@ -105,13 +105,13 @@ const Photos = () => {
       }
 
       function cleanupSlides() {
-        const imgElements = sliderImagesRef.current.querySelectorAll(".img");
-        if (imgElements.length > totalSlides) {
-          gsap.to(imgElements[0], {
+        const ImageElements = sliderImagesRef.current.querySelectorAll(".Image");
+        if (ImageElements.length > totalSlides) {
+          gsap.to(ImageElements[0], {
             opacity: 0,
             duration: 0.5,
             onComplete: () => {
-              imgElements[0].remove();
+              ImageElements[0].remove();
             },
           });
         }
@@ -128,12 +128,12 @@ const Photos = () => {
             const clickedIndex =
               Array.from(previewsRef.current).indexOf(clickedPrev) + 1;
 
-            if (clickedIndex !== currentImg) {
-              if (clickedIndex < currentImg) {
-                currentImg = clickedIndex;
+            if (clickedIndex !== currentImage) {
+              if (clickedIndex < currentImage) {
+                currentImage = clickedIndex;
                 animateSlide("left");
               } else {
-                currentImg = clickedIndex;
+                currentImage = clickedIndex;
                 animateSlide("right");
               }
               updateActiveSlidePreview();
@@ -143,14 +143,14 @@ const Photos = () => {
           return;
         }
 
-        if (clickPosition < sliderWidth / 2 && currentImg !== 1) {
-          currentImg--;
+        if (clickPosition < sliderWidth / 2 && currentImage !== 1) {
+          currentImage--;
           animateSlide("left");
         } else if (
           clickPosition > sliderWidth / 2 &&
-          currentImg !== totalSlides
+          currentImage !== totalSlides
         ) {
-          currentImg++;
+          currentImage++;
           animateSlide("right");
         }
 
@@ -173,8 +173,8 @@ const Photos = () => {
     <>
       <div className="slider" ref={sliderRef}>
         <div className="slider-images" ref={sliderImagesRef}>
-          <div className="img">
-            <img src="/assets/img1.jpg" />
+          <div className="Image">
+            <Image src="/assets/Image1.jpg" />
           </div>
         </div>
 
@@ -211,7 +211,7 @@ const Photos = () => {
                 (previewsRef.current = [...(previewsRef.current || []), el])
               }
             >
-              <img src={`/assets/img${num}.jpg`} />
+              <Image src={`/assets/Image${num}.jpg`} />
             </div>
           ))}
         </div>
