@@ -199,6 +199,15 @@ input:checked~.toggle span {
   .menu .socials .follow-us {
     font-size: 11px;
   }
+
+  .menu .col {
+    position: relative;
+    height: 100%;
+    padding: 5em 1em 1em 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
 
 .menu .socials .sub-col .line p a.no-url {
