@@ -2,7 +2,6 @@
 import { createContext, useState } from 'react'
 import Menu from './components/Menu/Menu';
 import GradientBlur from "./components/GradientBlur/GradientBlur";
-
 export const DarkModeContext = createContext();
 
 const Providers = ({ children }) => {
