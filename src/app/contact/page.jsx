@@ -48,7 +48,7 @@ const Page = () => {
                 <p>Where</p>
               </div>
               <div className="item">
-                <p>Standford University</p>
+                <p>Stanford University</p>
               </div>
               <div className="item">
                 <p> 450 Jane Stanford Waym</p>

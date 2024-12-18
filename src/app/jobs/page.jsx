@@ -116,7 +116,7 @@ const JobsPage = () => {
         <Footer />
         <div className="page-logo-container">
           <Image
-            src="/jobs/standford-png.png"
+            src="/jobs/Stanford-png.png"
             alt="Stanford Logo"
             className="page-logo"
             width={100}

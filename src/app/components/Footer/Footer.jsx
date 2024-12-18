@@ -10,7 +10,7 @@ const Footer = () => {
           <p>Privacy Policy & Cookie</p>
         </div>
         <div className="footer-item">
-          <p>&copy;2024 Standford University </p>
+          <p>&copy;2024 Stanford University </p>
         </div>
       </div>
     </>

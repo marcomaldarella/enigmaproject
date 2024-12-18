@@ -14,7 +14,7 @@ export const address = [
   "The Enigma Project",
   "A quest to decrypt the neural code",
   null,
-  "Standford University",
+  "Stanford University",
   "450 Jane Stanford Way,",
   "California, United States"
 ];
