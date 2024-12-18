@@ -224,12 +224,12 @@ input:checked~.toggle span {
   }
 
   .theme-toggle-container {
-    bottom: 3em;
+    bottom: 2em;
     position: fixed;
   }
 
   .copyright {
-    bottom: 3em;
+    bottom: 2em;
     position: fixed;
   }
 
