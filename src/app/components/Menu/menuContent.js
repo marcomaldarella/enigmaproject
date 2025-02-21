@@ -11,7 +11,7 @@ export const socials = [
 export const address = [
   "The Enigma Project",
   "A quest to decrypt the neural code",
-  "Stanford University, Palo Alto, California",
+  "Stanford University, Palo Alto",
   "California, United States"
 ];
 
