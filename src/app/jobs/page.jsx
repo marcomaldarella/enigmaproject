@@ -65,6 +65,7 @@ const JobsPageContent = () => {
             <h1>Join us</h1>
             <h3>
               Our team at Stanford has pioneered methods in NeuroAI, neural decoding, interpretability, neuroscience theory, and neural recording technology.
+              <br></br>
             </h3>
           </div>
         </div>
