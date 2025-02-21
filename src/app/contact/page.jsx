@@ -43,72 +43,59 @@ const Page = () => {
             <div className="contact-header">
               <h1 ref={headerRef}>Contact</h1>
             </div>
+
             <div className="where" ref={(el) => (sectionsRef.current[0] = el)}>
               <div className="title">
                 <p>Where</p>
               </div>
               <div className="item">
-                <p>Stanford University</p>
-              </div>
-              <div className="item">
-                <p> 450 Jane Stanford Waym</p>
-              </div>
-              <div className="item">
-                <p>Stanford, CA 94305, United States</p>
+                <p>Stanford University, Palo Alto, California</p>
               </div>
             </div>
+
             <div className="vat" ref={(el) => (sectionsRef.current[1] = el)}>
               <div className="title">
                 <p>Mail</p>
               </div>
               <div className="item">
                 <p>
-                  <a href="#">info@enigmaproject.ai</a>
+                  <a href="mailto:info@enigmaproject.ai">info@enigmaproject.ai</a>
                 </p>
               </div>
             </div>
           </div>
 
           <div className="col">
-            <div
-              className="socials"
-              ref={(el) => (sectionsRef.current[2] = el)}
-            >
+            <div className="socials" ref={(el) => (sectionsRef.current[2] = el)}>
               <div className="title">
-                <p> Socials </p>
+                <p>Socials</p>
               </div>
               <div className="item">
                 <p>
-                  <a href="https://www.linkedin.com/company/enigma-project/"> Linkedin</a>
-                </p>
-              </div>
-              <div className="item">
-                <p>
-                </p>
-              </div>
-              <div className="item">
-                <p>
-                  <a href="#"> </a>
+                  <a href="https://www.linkedin.com/company/enigma-project/" target="_blank" rel="noopener noreferrer">
+                    LinkedIn
+                  </a>
                 </p>
               </div>
             </div>
+
             <div className="mail" ref={(el) => (sectionsRef.current[3] = el)}>
               <div className="title">
                 <p>Recruiting</p>
               </div>
               <div className="item">
                 <p>
-                  <a href="#">recruiting@enigmaproject.ai</a>
+                  <a href="mailto:recruiting@enigmaproject.ai">recruiting@enigmaproject.ai</a>
                 </p>
               </div>
             </div>
           </div>
-          <Footer></Footer>
 
+          {/* Footer senza copyright e privacy */}
+          <Footer hideLegalLinks />
         </div>
       </div>
     </ReactLenis>
-
   );
 };
 

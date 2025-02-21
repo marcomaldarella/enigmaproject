@@ -7,10 +7,10 @@ const Footer = () => {
     <>
       <div className="footer">
         <div className="footer-item">
-          <p>Privacy Policy & Cookie</p>
+          <p>&copy;2025</p>
         </div>
         <div className="footer-item">
-          <p>&copy;2024 Stanford University </p>
+          <p>Stanford University </p>
         </div>
       </div>
     </>

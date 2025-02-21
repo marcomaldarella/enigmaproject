@@ -5,14 +5,13 @@ export const links = [
 ];
 
 export const socials = [
-  { label: "Linkedin", url: "https://www.linkedin.com/company/enigma-project/" },
+  { label: "LinkedIn", url: "https://www.linkedin.com/company/enigma-project/" },
 ];
 
 export const address = [
   "The Enigma Project",
   "A quest to decrypt the neural code",
-  null,
-  "Stanford University",
+  "Stanford University, Palo Alto, California",
   "California, United States"
 ];
 
