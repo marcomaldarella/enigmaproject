@@ -1,0 +1,261 @@
+:root {
+  --menu-bg-color-day: #ffffff;
+  --menu-bg-color-night: #000000;
+  --text-color-day: #000000;
+  --text-color-night: #ffffff;
+  --text-secondary: #a5a5a5;
+}
+
+body.day-mode .menu {
+  background-color: var(--menu-bg-color-day);
+  color: var(--text-color-day);
+}
+
+body.night-mode .menu {
+  background-color: var(--menu-bg-color-night);
+  color: var(--text-color-night);
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+  pointer-events: none;
+  z-index: 2;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.menu .col {
+  position: relative;
+  height: 100%;
+  padding: 18em 1em 1em 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu .col-1 {
+  flex: 0.8 1;
+}
+
+.menu .col-2 {
+  flex: 1.1;
+}
+
+.menu .link {
+  margin-bottom: 0.25em;
+}
+
+.menu .link-wrapper {
+  position: relative;
+  transform: translateY(60px);
+}
+
+.menu .link h1 {
+  font-size: 5em;
+  transition: font-size 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.menu .link h1:hover {
+  font-size: 5em;
+  opacity: 0.5;
+}
+
+.menu .socials {
+  width: 100%;
+  display: flex;
+  gap: 2em;
+}
+
+.menu .socials {
+  width: 100%;
+  display: flex;
+  gap: 2em;
+}
+
+.menu .socials .sub-col {
+  flex: 1;
+}
+
+.menu .socials .sub-col .line p,
+.menu .socials .sub-col .line p a {
+  color: var(--text-secondary);
+}
+
+.menu .socials .sub-col:nth-child(2) {
+  text-align: right;
+}
+
+.menu .socials .sub-col .line p a {
+  color: var(--text-secondary);
+  transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  /* Aggiungi transizioni per colore e opacità */
+}
+
+
+.theme-toggle-container {
+  position: absolute;
+  bottom: 1em;
+  left: 1em;
+}
+
+.toggle {
+  font-size: 1em;
+  border: 0.9px solid #555555;
+  border-radius: 1em;
+  cursor: pointer;
+  display: block;
+  height: 1em;
+  width: 2em;
+  position: relative;
+}
+
+.toggle span {
+  background-color: #555555;
+  border-radius: 1em;
+  display: block;
+  height: 0.75em;
+  position: absolute;
+  top: 0.125em;
+  left: 0.125em;
+  text-indent: -9999px;
+  transition: left 0.25s;
+  width: 0.75em;
+  z-index: 2;
+}
+
+.toggle::before,
+.toggle::after {
+  content: "";
+  display: block;
+  border-radius: 1em;
+  position: absolute;
+  z-index: 1;
+
+}
+
+.toggle::after {
+  box-shadow: 0.125em 0.125em #555555;
+  height: 0.5em;
+  right: 0.45em;
+  top: 0.0625em;
+  width: 0.5em;
+}
+
+.toggle::before {
+  background-color: #555;
+  height: 0.25em;
+  outline: 0.125em dotted #555;
+  outline-offset: 0.0625em;
+  left: 0.35em;
+  top: 0.35em;
+  width: 0.25em;
+}
+
+input:checked~.toggle span {
+  left: 1em;
+}
+
+.copyright {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  font-size: 0.875em;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 900px) {
+  .menu {
+    flex-direction: column;
+  }
+
+  .menu .col-1 {
+    align-items: flex-start;
+    padding-top: 0em;
+  }
+
+  .menu .socials {
+    width: 100%;
+    gap: 1em;
+  }
+
+  .menu .socials .sub-col:nth-child(2) {
+    text-align: left;
+    padding-bottom: 1px;
+  }
+
+  .menu .socials p {
+    font-size: 11px;
+  }
+
+  .menu .socials a {
+    font-size: 11px;
+  }
+
+  .menu .socials .follow-us {
+    font-size: 11px;
+  }
+
+  .menu .col {
+    position: relative;
+    height: 100%;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 8em;
+    padding-bottom: 0.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    justify-content: space-between;
+  }
+
+
+
+  .menu .col-2 {
+    flex: 0;
+  }
+
+  .col.col-1:nth-of-type(2) {
+    padding-top: 20px;
+  }
+
+  .theme-toggle-container {
+    bottom: 2em;
+    position: fixed;
+  }
+
+  .copyright {
+    bottom: 2em;
+    position: fixed;
+  }
+
+
+
+}
+
+.menu .socials .sub-col .line p a.no-url {
+  pointer-events: none;
+  color: var(--text-secondary);
+  cursor: default;
+}
+
+.menu .socials .sub-col .line p a:not(.no-url):hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.follow-us {
+  opacity: 50%;
+}
+
+.address .line-2 {
+  opacity: 50%;
+}
+
+.address .line-3 {
+  opacity: 50%;
+}

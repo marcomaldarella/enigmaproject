@@ -1,0 +1,149 @@
+.jobs-intro {
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  gap: 8em;
+}
+
+.jobs-page .container {
+  width: 100%;
+  height: 100%;
+  padding-top: 8em;
+  padding-bottom: 1em;
+}
+
+.jobs-portrait-Image {
+  flex: 1;
+}
+
+.jobs-portrait {
+  clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+}
+
+.jobs-copy-wrapper {
+  flex: 1.8;
+  padding: 0em;
+}
+
+.jobs-copy-wrapper h1 {
+  margin-bottom: 0.5em;
+}
+
+.jobs-copy-wrapper h3 {
+  margin-bottom: 0.5em;
+}
+
+.jobs-intro .line-wrapper,
+.jobs-intro .jobs-copy-title,
+.cv-header .line-wrapper,
+.cv-name h3 .line-wrapper,
+.cv-description .line-wrapper {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.cv-header .line-wrapper span {
+  position: relative;
+  transform: translateY(70px);
+  will-change: transform;
+}
+
+.cv-name h3 .line-wrapper span,
+.cv-description h3 .line-wrapper span {
+  position: relative;
+  transform: translateY(70px);
+  will-change: transform;
+}
+
+.jobs-intro .jobs-copy-title h1 {
+  position: relative;
+  transform: translateY(70px);
+  will-change: transform;
+}
+
+.jobs-intro .line-wrapper span {
+  position: relative;
+  transform: translateY(30px);
+  will-change: transform;
+}
+
+.jobs-hero-Image {
+  width: 100%;
+  height: 75vh;
+  overflow: hidden;
+  margin: 8em 0;
+}
+
+.cv-wrapper {
+  width: 85%;
+  margin: 0 auto 16em auto;
+}
+
+.cv-wrapper .cv-header {
+  margin-bottom: 2em;
+}
+
+.cv-item {
+  width: 100%;
+  padding: 1.25em 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--text-darker);
+}
+
+.cv-wrapper h3 {
+  font-size: 18px;
+}
+
+@media (max-width: 900px) {
+  .jobs-intro {
+    width: 100%;
+    flex-direction: column;
+    gap: 8em;
+  }
+
+  .jobs-copy-wrapper h1 {
+    margin-bottom: 1em;
+  }
+
+  .cv-wrapper {
+    width: 100%;
+  }
+}
+
+
+.cv-toggle-icon {
+  margin-left: 10px;
+}
+
+.cv-content {
+  padding-top: 10px;
+  max-height: 0;
+  overflow: hidden;
+  margin-left: 0;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.cv-content.expanded {
+  max-height: 100%;
+}
+
+.page-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  padding: 20px 0;
+  /* Cambia se vuoi */
+}
+
+.page-logo {
+  max-width: 100px;
+  /* Imposta una larghezza massima */
+  height: auto;
+  /* Mantieni il rapporto di aspetto */
+}
+
+.cv-content {
+  font-size: 14px;
+}
