@@ -7,13 +7,10 @@ export const metadata = {
   title: 'Enigma',
   description: 'Enigma is a non-profit research organization based at Stanford University, leveraging deep learning for neuroscientific insight',
   icons: {
-    icon: '/favicon.ico',       // percorso del tuo favicon
-    // apple: '/apple-touch-icon.png',   // se vuoi aggiungere icone Apple
-    // shortcut: '/favicon-16x16.png',   // o altre formati
+    icon: '/favicon.ico',
   },
 }
 
-}
 
 export default function RootLayout({ children }) {
   return (

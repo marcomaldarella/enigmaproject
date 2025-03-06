@@ -1,0 +1,92 @@
+.decks-intro {
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  gap: 8em;
+}
+
+.decks-page .container {
+  width: 100%;
+  height: 100%;
+  padding-top: 20em;
+  padding-bottom: 1em;
+}
+
+.decks-copy-wrapper {
+  flex: 1.8;
+  padding: 0em;
+}
+
+.decks-copy-wrapper h1 {
+  margin-bottom: 0.5em;
+}
+
+.decks-copy-wrapper h3 {
+  margin-bottom: 0.5em;
+}
+
+.decks-wrapper {
+  width: 85%;
+  margin: 0 auto 16em auto;
+}
+
+.decks-wrapper .decks-header {
+  margin-bottom: 2em;
+}
+
+.decks-item {
+  width: 100%;
+  padding: 1.25em 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--text-darker);
+  align-items: center;
+}
+
+.decks-item h3 {
+  font-size: 18px;
+}
+
+.deck-link {
+  color: var(--text-primary);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .decks-intro {
+    width: 100%;
+    flex-direction: column;
+    gap: 8em;
+  }
+
+  .decks-copy-wrapper h1 {
+    margin-bottom: 1em;
+  }
+
+  .decks-wrapper {
+    width: 100%;
+  }
+}
+
+
+
+.page-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  padding: 20px 0;
+  /* Cambia se vuoi */
+}
+
+.page-logo {
+  max-width: 100px;
+  /* Imposta una larghezza massima */
+  height: auto;
+  /* Mantieni il rapporto di aspetto */
+}
+
+.cv-content {
+  font-size: 14px;
+}
