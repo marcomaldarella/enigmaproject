@@ -2,8 +2,6 @@ export const links = [
   { label: "Jobs", path: "/jobs" },
   { label: "About", path: "/about" },
   { label: "Contact", path: "/contact" },
-  { label: "Decks", path: "/decks" },
-
 ];
 
 export const socials = [
