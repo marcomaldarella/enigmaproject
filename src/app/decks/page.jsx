@@ -15,7 +15,6 @@ const DecksPageContent = () => {
         <div className="col decks-copy-wrapper">
           <div className="decks-copy">
             <h1>Our Decks</h1>
-            <h3>Explore our selection of decks.</h3>
           </div>
         </div>
       </div>
