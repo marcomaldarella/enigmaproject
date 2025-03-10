@@ -92,3 +92,49 @@
     align-items: center;
   }
 }
+
+.grain-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: radial-gradient(rgba(0, 0, 0, 0.01) 10%, transparent 100%);
+  mix-blend-mode: overlay;
+  opacity: 0.4;
+  animation: grain-animation 0.1s infinite;
+}
+
+@keyframes grain-animation {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 100px 100px;
+  }
+}
+
+
+.video-mobile {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .video-desktop {
+    display: none;
+  }
+
+  .video-mobile {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    opacity: 20%;
+  }
+}
+
+.video-background video.dark-mode {
+  filter: invert(1);
+}

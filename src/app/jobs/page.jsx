@@ -73,7 +73,7 @@ const JobsPageContent = () => {
 
       <div className="cv-wrapper">
         <div className="cv-header">
-          <h1>Jobs</h1>
+          <h1 className="h1-spacer">Jobs</h1>
         </div>
         <div className="cv-list">
           {cvItems.map((item, index) => (
