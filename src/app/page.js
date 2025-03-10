@@ -39,14 +39,6 @@ export default function Home() {
       ease: "power1.inOut"
     });
 
-    // Effetto blur oscillante
-    gsap.to(".video-background video", {
-      filter: "blur(0.1px)",
-      duration: 3,
-      repeat: -1,
-      yoyo: true,
-      ease: "sine.inOut"
-    });
 
     // ✅ INVERSIONE SOLO DOPO IL TOGGLE
     if (videoRef.current && videoMobileRef.current) {
@@ -99,7 +91,6 @@ export default function Home() {
           <source src="/video-mobile.mp4" type="video/mp4" />
         </video>
         <div className="gradient-overlay"></div>
-        <div className="grain-overlay"></div>
       </div>
 
       <div className="hero-title">
