@@ -23,11 +23,6 @@ html::-webkit-scrollbar {
   /* Opzionale: solo per rendere la scrollbar completamente trasparente */
 }
 
-body {
-  overflow-y: scroll;
-  /* Mantiene la funzionalità di scroll */
-}
-
 /* Font-face */
 @font-face {
   font-family: "PP Neue Montreal";

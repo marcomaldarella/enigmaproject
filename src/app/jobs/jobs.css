@@ -153,10 +153,10 @@
 }
 
 .jobs-page body {
-  overflow: auto;
+  overflow: auto !important;
 }
 
 .jobs-page {
-  overflow: auto;
+  overflow: auto !important;
   height: auto;
 }
