@@ -40,13 +40,20 @@
   }
 }
 
-#logo-container {
-  display: flex;
-  mix-blend-mode: difference;
+/* Solo il logo della home */
+#logo-container-nav {
+  mix-blend-mode: normal;
+  position: relative;
+  left: 0;
+  top: 0;
+  transform: none;
+  opacity: 1;
 }
 
-.logo svg {
-  width: 80px;
+#logo-container-nav svg {
+  width: 100px;
   height: auto;
+  display: block;
+  visibility: visible;
+  opacity: 1;
 }
-

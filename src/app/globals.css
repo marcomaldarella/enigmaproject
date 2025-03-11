@@ -250,3 +250,23 @@ Image {
   pointer-events: none;
   /* Impedisce che il canvas interferisca con gli eventi del mouse */
 }
+
+#logo-container svg {
+  display: block;
+  visibility: visible;
+  opacity: 1 !important;
+}
+
+#logo-container {
+  mix-blend-mode: normal;
+  position: relative;
+  left: 0;
+  transform: none;
+  opacity: 1;
+}
+
+#logo-container svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}

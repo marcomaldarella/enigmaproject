@@ -97,7 +97,7 @@ export default function Home() {
     };
 
   return (
-    <div className={styles.page} style={{ backgroundColor: logoColors.background }}>
+    <div className="home-page" style={{ backgroundColor: logoColors.background }}>
       {/* Video di sfondo */}
       <div className="video-background">
         <div className="gradient-overlay"></div>

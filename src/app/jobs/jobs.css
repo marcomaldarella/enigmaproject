@@ -151,3 +151,12 @@
 .h1-spacer {
   margin-top: 40px;
 }
+
+.jobs-page body {
+  overflow: auto;
+}
+
+.jobs-page {
+  overflow: auto;
+  height: auto;
+}

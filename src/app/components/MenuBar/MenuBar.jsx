@@ -7,7 +7,7 @@ import LogoBar from "../LogoBar/LogoBar";
 const MenuBar = ({ isOpen, toggleMenu, closeMenu, logoColor }) => {
   return (
     <div className="menu-bar">
-      <div id="logo-container" className="logo" onClick={closeMenu}>
+      <div id="logo-container-nav" className="logo" onClick={closeMenu}>
         <Link href="/">
           <LogoBar fillColor={logoColor} /> {/* Passa il colore dinamico */}
         </Link>
