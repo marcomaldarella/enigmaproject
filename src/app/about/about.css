@@ -1,127 +1,200 @@
-.about-intro {
-  width: 75%;
+.about-container {
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  gap: 8em;
+  flex-direction: column;
+  gap: 6em;
 }
 
-.about-portrait-Image {
-  flex: 1;
+/* --- INTRO (FULL WIDTH, CENTRATA) --- */
+.project-intro {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8em;
+  text-align: left;
 }
 
-.about-portrait {
-  clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+.project-intro p {
+  font-size: 1rem;
+  line-height: 1.7;
+  opacity: 0.92;
 }
 
-.about-copy-wrapper {
-  flex: 1.8;
+/* --- PARAGRAFI SU DUE COLONNE --- */
+.project-columns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3em 5em;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.about-copy-wrapper h1 {
-  margin-bottom: 2em;
+.project-columns p {
+  font-size: 1rem;
+  line-height: 1.7;
+  opacity: 0.92;
 }
 
-.about-copy-wrapper h3 {
+/* --- LINK STILE COERENTE --- */
+.project-intro a,
+.project-columns a {
+  color: currentColor;
+  opacity: 0.85;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: opacity 0.2s ease;
+}
+
+.project-intro a:hover,
+.project-columns a:hover {
+  opacity: 1;
+}
+
+/* --- LEADERSHIP SECTION --- */
+.leadership {
+  text-align: left;
+}
+
+.leaders-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2em 6em;
+  margin-top: 2em;
+  list-style: none;
+  padding: 0;
+}
+
+.leaders-list li {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.leaders-list li::before {
+  content: '';
+  display: block;
   margin-bottom: 0.5em;
 }
 
-.about-intro .line-wrapper,
-.about-intro .about-copy-title,
-.cv-header .line-wrapper,
-.cv-name h3 .line-wrapper,
-.cv-year .line-wrapper {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-}
-
-.cv-header .line-wrapper span {
-  position: relative;
-  transform: translateY(70px);
-  will-change: transform;
-}
-
-.cv-name h3 .line-wrapper span,
-.cv-year h3 .line-wrapper span {
-  position: relative;
-  transform: translateY(70px);
-  will-change: transform;
-}
-
-.about-intro .about-copy-title h1 {
-  position: relative;
-  transform: translateY(70px);
-  will-change: transform;
-}
-
-.about-intro .line-wrapper span {
-  position: relative;
-  transform: translateY(30px);
-  will-change: transform;
-}
-
-.about-hero-Image {
-  width: 100%;
-  height: 75vh;
-  overflow: hidden;
-  margin: 8em 0;
-}
-
-.cv-wrapper {
-  width: 85%;
-  margin: 0 auto 16em auto;
-}
-
-.cv-wrapper .cv-header {
-  margin-bottom: 2em;
-}
-
-.cv-item {
-  width: 100%;
-  padding: 1.25em 0;
+/* Nome in grassetto, titolo più chiaro */
+.leaders-list li {
   display: flex;
-  justify-content: space-between;
-  gap: 2em;
-  border-bottom: 1px solid var(--text-darker);
+  flex-direction: column;
 }
 
-.cv-wrapper h3 {
-  font-size: 18px;
+.leaders-list li strong {
+  font-weight: 600;
+  font-size: 1.05rem;
 }
 
-@media (max-width: 900px) {
-  .about-intro {
-    width: 100%;
-    flex-direction: column;
-    gap: 8em;
+.leaders-list li span {
+  font-weight: 400;
+  opacity: 0.7;
+  font-size: 0.95rem;
+  margin-top: 0.25em;
+}
+
+/* --- MOBILE --- */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 6em 1em;
   }
 
-  .about-copy-wrapper h1 {
-    margin-bottom: 1em;
+  .project-columns {
+    grid-template-columns: 1fr;
   }
 
-  .cv-wrapper {
-    width: 100%;
+  .project-intro p,
+  .project-columns p {
+    font-size: 0.95rem;
+  }
+
+  .leaders-list {
+    grid-template-columns: 1fr;
+  }
+
+  .leaders-list li {
+    font-size: 0.95rem;
   }
 }
 
-.animated-background {
+.about-container {
   width: 100%;
-  height: 50vh;
-  background: linear-gradient(90deg, #000, #333, #000);
-  background-size: 200% 200%;
-  animation: backgroundMove 5s infinite;
+  padding: 12vh 4vw 6em 4vw;
+  display: flex;
+  flex-direction: column;
+  gap: 6em;
 }
 
-@keyframes backgroundMove {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  100% {
-    background-position: 100% 50%;
-  }
+/* Primo blocco: paragrafo unico full width con padding laterale */
+.project-full {
+  width: 100%;
+  margin-bottom: 4em;
 }
 
-.hero-title .line p {
-  font-size: 18px;
-  line-height: 1.6;
+.project-full p {
+  width: 100%;
+  font-size: 1rem;
+  line-height: 1.7;
+  opacity: 0.92;
+}
+
+/* Blocchi a due colonne */
+.project-columns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3em 6em;
+  width: 100%;
+}
+
+.project-columns p {
+  font-size: 1rem;
+  line-height: 1.7;
+  opacity: 0.92;
+}
+
+/* Link */
+.project-columns a,
+.project-full a {
+  color: currentColor;
+  opacity: 0.85;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: opacity 0.2s ease;
+}
+
+.project-columns a:hover,
+.project-full a:hover {
+  opacity: 1;
+}
+
+/* Leadership invariata */
+.leaders-list li {
+  display: flex;
+  flex-direction: column;
+}
+
+.leaders-list li strong {
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.leaders-list li span {
+  font-weight: 400;
+  opacity: 0.7;
+  font-size: 0.95rem;
+  margin-top: 0.25em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .project-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .project-full p,
+  .project-columns p {
+    font-size: 0.95rem;
+  }
 }

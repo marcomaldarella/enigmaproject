@@ -265,3 +265,10 @@ Image {
   height: auto;
   display: block;
 }
+
+.theme-toggle-container {
+  position: fixed;
+  bottom: 1em;
+  left: 1em;
+  /* Sempre sopra */
+}

@@ -1,95 +1,85 @@
 'use client';
 
-import React, { useEffect, useContext, useRef } from "react";
-import styles from "../home.css";
-import gsap from "gsap";
-import CustomEase from "gsap/CustomEase";
-import { DarkModeContext } from "../Providers";
-import Footer from "../components/Footer/Footer";
+import React, { useEffect, useContext, useRef } from 'react';
+import gsap from 'gsap';
+import CustomEase from 'gsap/CustomEase';
+import { DarkModeContext } from '../Providers';
+import Footer from '../components/Footer/Footer';
+import styles from './about.css';
 
 export default function About() {
   const { darkMode } = useContext(DarkModeContext);
-  const videoRef = useRef(null);
-  const videoMobileRef = useRef(null);
+  const containerRef = useRef(null);
 
   useEffect(() => {
     gsap.registerPlugin(CustomEase);
-    CustomEase.create("hop-main", "M0,0 C0.354,0 0.464,0.133 0.498,0.502 0.532,0.872 0.651,1 1,1");
+    CustomEase.create('hop-main', 'M0,0 C0.354,0 0.464,0.133 0.498,0.502 0.532,0.872 0.651,1 1,1');
 
     gsap.fromTo(
-      ".hero-title .line",
-      { opacity: 0, y: 20 },
-      { opacity: 1, y: 0, duration: 0.8, ease: "hop-main", stagger: 0.3 }
+      containerRef.current.querySelectorAll('.line'),
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 0.8, ease: 'hop-main', stagger: 0.2 }
     );
-
-    // Opacità oscillante del video
-    gsap.to([videoRef.current, videoMobileRef.current], {
-      opacity: 0.18,
-      duration: 4,
-      repeat: -1,
-      yoyo: true,
-      ease: "power1.inOut"
-    });
-
-    // Effetto blur oscillante
-    gsap.to(".video-background video", {
-      filter: "blur(0.3px)",
-      duration: 0.2,
-      repeat: -1,
-      yoyo: true,
-      ease: "sine.inOut"
-    });
-
-    // ✅ Inversione video solo dopo il toggle del tema
-    if (videoRef.current && videoMobileRef.current) {
-      if (darkMode) {
-        videoRef.current.classList.add("dark-mode");
-        videoMobileRef.current.classList.add("dark-mode");
-      } else {
-        videoRef.current.classList.remove("dark-mode");
-        videoMobileRef.current.classList.remove("dark-mode");
-      }
-    }
-  }, [darkMode]);
+  }, []);
 
   const logoColors = darkMode
-    ? {
-      primary: "#ffffff",
-      secondary: "#aaaaaa",
-      background: "#000000",
-      svgFill: "#ffffff",
-    }
-    : {
-      primary: "#000000",
-      secondary: "#555555",
-      background: "#ffffff",
-      svgFill: "#000000",
-    };
+    ? { background: '#000000', text: '#ffffff' }
+    : { background: '#ffffff', text: '#000000' };
 
   return (
-    <div className={styles.page} style={{ backgroundColor: logoColors.background }}>
-      {/* Video di sfondo */}
-      <div className="video-background">
-        <video ref={videoRef} autoPlay loop muted playsInline className="video-desktop">
-          <source src="/video.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <video ref={videoMobileRef} autoPlay loop muted playsInline className="video-mobile">
-          <source src="/video-mobile.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <div className="gradient-overlay"></div>
-      </div>
+    <div className={styles.page} style={{ backgroundColor: logoColors.background, color: logoColors.text }} ref={containerRef}>
+      <div className="about-container">
 
-      <div className="hero-title">
-        <div className="line">
-          <p>Enigma is a non-profit research organization based at Stanford University</p>
-        </div>
-        <div className="line">
-          <p>leveraging deep learning for neuroscientific insight</p>
-        </div>
+        <section className="projects">
+          {/* Primo paragrafo: full width */}
+          <div className="project-full">
+            <p className="line">
+              Enigma is a non-profit research organization based at Stanford University leveraging deep learning to accelerate neuroscientific discovery.
+              Our team has pioneered methods in NeuroAI, neural recording technology, and theoretical neuroscience.
+            </p>
+            <p className="line">
+              We include key architects of <a href="https://www.science.org/doi/abs/10.1126/science.abf4588" target="_blank">Neuropixels</a>—a revolutionary high-density neural recording technology that transformed systems neuroscience by enabling simultaneous recording from thousands of neurons at single-cell resolution [<a href="https://www.economist.com/science-and-technology/2017/11/09/a-new-nerve-cell-monitor-will-help-those-studying-brains" target="_blank">Economist</a>].
+            </p>
+            <p className="line">
+              Members of our team built the first foundation model of the mouse visual cortex as part of the <a href="https://www.nature.com/immersive/d42859-025-00001-w/index.html" target="_blank">MICrONS Project</a>—the largest initiative to date integrating neuronal function with connectomics. The outputs of this landmark initiative have been published across ten papers, including seven featured in the journal Nature [<a href="https://www.nytimes.com/2025/04/09/science/neuroscience-brain-mice-map.html" target="_blank">New York Times</a>, <a href="https://www.reuters.com/science/scientists-produce-painstaking-wiring-diagram-mouses-brain-2025-04-09/" target="_blank">Reuters</a>].
+            </p>
+          </div>
+
+          {/* Due colonne per i paragrafi successivi */}
+          <div className="project-columns">
+            <p className="line">
+              Our <strong>Inception Loops</strong> paradigm for end-to-end closed loop neural control bridges neuroscience and mechanistic interpretability—offering unprecedented insight into the neural representation.
+            </p>
+            <p className="line">
+              Now Enigma is pushing beyond—to unlock the neural code of biological intelligence.
+            </p>
+          </div>
+        </section>
+
+        <section className="leadership">
+          <h2 className="line">Leadership</h2>
+          <ul className="leaders-list">
+            <li className="line">
+              <strong>Andreas Tolias</strong>
+              <span>Phd, Co-Director</span>
+            </li>
+            <li className="line">
+              <strong>Sophia Sanborn</strong>
+              <span>Phd, Co-Director</span>
+            </li>
+            <li className="line">
+              <strong>Tirin Moore</strong>
+              <span>Phd, Co-Director</span>
+            </li>
+            <li className="line">
+              <strong>Barun Dutta</strong>
+              <span>Chief Scientist, IMEC & Co-Director</span>
+            </li>
+          </ul>
+        </section>
+
       </div>
-      <Footer></Footer>
+      <Footer />
     </div>
   );
 }
