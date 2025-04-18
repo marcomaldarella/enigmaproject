@@ -221,7 +221,7 @@ const Menu = () => {
           </label>
         </div>
         <div className="copyright">
-          <p>©2025</p>
+          <p>© 2025</p>
         </div>
       </div>
     </div>
