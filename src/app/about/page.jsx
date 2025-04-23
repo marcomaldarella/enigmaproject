@@ -37,7 +37,7 @@ export default function About() {
         <section className="projects">
           <div className="project-full">
             <p className="line">
-              Enigma is a non-profit research organization based at Stanford University leveraging deep learning to accelerate neuroscientific discovery. Our team has pioneered methods in NeuroAI, neural recording technology, and theoretical neuroscience, and includes key architects of{' '}
+              Enigma is a non-profit research organization based at Stanford University leveraging deep learning to accelerate neuroscientific discovery.<br></br> Our team has pioneered methods in NeuroAI, neural recording technology, and theoretical neuroscience, and includes key architects of{' '}
               <a
                 href="https://www.science.org/doi/abs/10.1126/science.abf4588"
                 target="_blank"
