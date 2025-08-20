@@ -1,5 +1,113 @@
 export const cvItems = [
   {
+    name: "Mechanical Engineer: Experimental Neuroscience Systems",
+    description: `We are seeking a Mechanical Engineer with strong mechanical and mechatronic design skills to develop next generation neurophysiology and intracortical brain-interfacing technology. The ideal candidate will play a critical role in prototyping lightweight, highly scalable, precisely controlled mechanical systems, e.g., precise linear actuation of Neuropixels probes, enabling the team to record neural activity and understand the brain at unprecedented scale. This role is ideal for individuals who thrive at the rapidly evolving interface of neuroscience, engineering, and software development, and want to contribute to a uniquely interdisciplinary effort. This position is embedded within a vibrant team of neuroscientists, engineers, and software developers led by Andreas Tolias (toliaslab.org), Tirin Moore (moorelabstanford.com), and collaborators.
+    
+    Role & Responsibilities:
+    - Develop scalable and modular systems for neural recordings and animal behavior experiments
+    - Design, prototype, and fabricate electro-mechanical components used in experimental neuroscience, including 3D-printed and machined parts
+    - Design or integrate new approaches to miniaturized linear actuation and control, e.g., via piezoelectric motors, and online monitoring systems, e.g. via embedded cell-phone cameras and real-time, closed-loop computer vision software.
+    - Maintain design libraries and documentation for versioning, reproducibility, and team collaboration
+    - Collaborate closely with systems engineers and researchers to find creative solutions to evolving experimental needs
+
+Key Qualifications:
+    - Bachelor’s or Master’s degree in Mechanical Engineering, Biomedical Engineering, or a related field
+    - Strong experience with CAD tools (e.g., Fusion, OnShape, SolidWorks)
+    - Familiarity with software development, especially involving microcontrollers, control systems, prototype GUIs
+    - Experience with rapid prototyping using 3D printers
+    - Practical understanding of fabrication tolerances, material selection, and mechanical fabrication
+    - Ability to work independently in a fast-paced, interdisciplinary environment and an interest in advancing the frontier of Neuro-AI
+
+Preferred Qualifications:
+    - Familiarity with simple electronic circuits, motor control, embedded cameras, and LEDs
+    - Experience with programmatic CAD design, computational geometry, and/or CAD simulation
+    - Interest in haptic interface robotics, related control systems, and VR environment simulation
+    - Experience with developing miniature linear actuators (neurophysiology microdrives) or other lightweight, miniaturized experimental hardware
+    - Hands-on experience in a machine shop or prototyping lab
+    - Ability to work flexibly and collaboratively across multiple concurrent projects
+
+What We Offer:
+    - Work in a highly interdisciplinary environment bridging neuroscience, engineering, and AI
+    - Access to in-house 3d printing facilities and Stanford’s world-class fabrication facilities
+    - Opportunity to see your designs used in cutting-edge neuroscience experiments
+    - Competitive salary and benefits
+    - Mentorship and professional development
+
+
+Application:
+Please send your CV and one-page interest statement to: recruiting@enigmaproject.ai`
+  },
+  {
+    name: "Postdoctoral Researcher: Systems Neuroscience",
+    description: `We are seeking talented postdoctoral researchers with an extensive background in experimental systems neuroscience and excellent quantitative skills. Ideal candidates will have several years of practical experience performing neuro-behavioral and/or neuro-physiological experiments, including visual stimulus design, eye tracking, MRI or large-scale electrophysiology techniques (ideally Neuropixels). Additionally, candidates should possess a strong background in quantitative fields such as Mathematics, Physics, Engineering, or Computer Science. This is a collaborative, cross-functional team, and project assignments will be tailored to match each postdoc’s strengths and growth goals. If you are passionate about building high-quality neuroscience experiments and data systems in a highly interdisciplinary environment, we encourage you to apply. You will work closely with teams led by Andreas Tolias (toliaslab.org), Tirin Moore (moorelabstanford.com), and other collaborators at Stanford
+    
+    Role & Responsibilities:
+    - Design and optimize large-scale electrophysiological and behavioral experiments using next generation custom-built hardware and software platforms
+    - Develop and implement end-to-end experimental paradigms, including behavioral training and tracking, multi-Neuropixels recordings, imaging- and function-based recording path registration, and data quality control pipelines.
+    - Collaborate closely with other teams in the Enigma Project to ensure efficient, scalable, and high-quality data collection and processing, with opportunities to explore scientific questions at the interface of neuroscience and AI in collaboration with theory and modeling teams.
+
+Key Qualifications:
+    - PhD in Neuroscience, Bioengineering, Electric Engineering, Computer Science, Physics, or a related field
+    - Strong quantitative and analytical skills
+    - Experience in either experimental neuroscience (e.g., in vivo neurophysiological recordings, behavioral training) or computational data analysis (e.g., spike sorting, neural signal processing)
+    - Excellent communication and collaborative skills
+    - A strong sense of curiosity and initiative, and a desire to collaboratively reimagine and reinvent traditional systems neuroscience methodologies
+
+Preferred Qualifications: 
+    - Hands-on experience with Neuropixels or other large-scale electrophysiological recordings
+    - Experience designing, prototyping, and/or optimizing innovative experimental systems
+    - Strong background and extensive knowledge in visual neuroscience, including anatomy, physiology, and modeling of visual systems
+    - Background in developing visual, motor, or cognitive behavioral tasks and training animals
+    - Experience implementing and optimizing eye tracking, body tracking, and/or visual reality environments
+    - Proficiency in Python and scientific computing libraries
+    - Familiarity with spike sorting workflows (e.g., Kilosort, SpikeInterface) and neural data quality control
+    - Experience with imaging data processing, anatomical or functional registration, and 3D planning/reconstruction for recording trajectories
+
+
+What We Offer:
+    - A collaborative, interdisciplinary research environment spanning neuroscience, artificial intelligence, and systems engineering
+    - Opportunities to work with cutting-edge tools and contribute to high-impact neuroscience infrastructure
+    - Flexibility in project focus and opportunities to lead or co-lead initiatives based on your expertise
+    - Competitive salary and benefits
+    - Strong mentoring and career development support
+
+Application:
+Please send your CV and a one-page statement of interest to: recruiting@enigmaproject.ai`
+  },
+  {
+    name: "Software Engineer: Experimental Neuroscience Systems",
+    description: `We are seeking a talented Software Developer to support and expand the infrastructure for large-scale behavioral and neural recordings. The ideal candidate will work closely with systems engineers and neuroscientists to develop the next generation of low-latency experimental control software and 3d neurophysiology planning tools. The Enigma project and the infrastructure we are developing spans many areas of expertise; we seek a highly motivated and creative individual who can learn new technology stacks and approaches. This role is ideal for individuals who thrive at the rapidly evolving interface of neuroscience, engineering, and software development, and want to contribute to a uniquely interdisciplinary effort. You will join a vibrant team within the laboratories of Andreas Tolias (toliaslab.org), Tirin Moore (moorelabstanford.com), and other Stanford labs known for their innovation in perception, behavior, large-scale neural recordings, and Neuro-AI.
+    
+    Role & Responsibilities:  
+    - Collaborate with engineers and neuroscientists to design, build, and deploy next-generation experimental control systems tailored to high-throughput neural recording in rich, ethologically immersive behaviors
+    - Help design and develop a 3d planning tool to optimize neurophysiology experimental design
+    - Assist in scaling up our experimental systems and contribute to distributed data analysis pipeline
+    - Contribute to version controlled, modular, robust, and well documented codebases
+  
+    Key Qualifications:
+    - Bachelor’s or Master’s degree in Computer Science, Engineering, or a related field
+    - Proficiency in Python, version control (e.g., git), and collaborative software development workflows
+    - Experience working with modular, distributed software and/or hardware/software integration
+    - Familiarity with concepts such as state machines, event timing, inter-process and network communication
+    - Ability to work independently in a fast-paced, interdisciplinary environment and an interest in advancing the frontier of Neuro-AI
+
+    Preferred Qualifications:
+    - Proficiency in performant, low-level languages, especially Rust or C/C++
+    - Experience and/or interest in authoring software for 3D mesh geometry, rendering, collision detection and object packing optimization approaches
+    - Experience and/or interest developing with modern columnar data systems, e.g. Polars, PyArrow, Parquet, Delta Lake, and distributed analysis pipeline technology stacks
+    - Familiarity with hardware control libraries for data acquisition devices such as NI DAQ libraries and microcontrollers (e.g., Arduino, Teensy)
+    - Interest in neuroscience or psychophysics (behavioral) experiments
+
+    What We Offer:
+    - A highly collaborative environment across neuroscience, AI, and systems engineering
+    - Opportunity to contribute to a next-generation neurotechnology platform
+    - Competitive salary and benefits
+    - Strong mentoring and career development support
+
+    Application:
+    Please send your CV and one-page interest statement to: recruiting@enigmaproject.ai`
+  },
+  {
     name: "Research Scientist: Multi-Modal Modeling",
     description: `We are seeking exceptional research scientists to pioneer the development of foundation models that bridge artificial and biological intelligence. You will lead the development of large-scale transformer-based architectures that integrate diverse neural data streams—from visual stimuli to high-dimensional neuronal recordings and behavioral measurements. This position offers a unique opportunity to push the boundaries of self-supervised learning and multi-task objectives, creating models that not only predict neural responses but reveal fundamental principles of biological computation. The ideal candidate will have extensive experience developing multimodal foundation models and interest in pioneering the application of these techniques for decoding the neural basis of intelligence.
 
@@ -97,7 +205,7 @@ export const cvItems = [
   - Experience with automated scientific discovery systems or agentic AI
   - Strong programming skills with experience in modern ML frameworks
   - Demonstrated ability to lead research projects and mentor others
-  - Excellent written and verbal communication skills
+  - Excellent written & verbal communication skills
 
   Preferred Qualifications:
   - Experience developing novel interpretability methods
